@@ -1,0 +1,79 @@
+The top 5 results for the four queries are as follows
+
+query 1-
+
+Lucene:
+
+Globalwarming
+JosephJ.Romm
+Environmentalimpactoftheenergyindustry
+Climatechangemitigation
+Climate
+
+BM25 - 
+1|Q0|Globalwarming|1|0.8129541993736964|Vaibhav
+1|Q0|Energyconsumption|2|0.5531097343420197|Vaibhav
+1|Q0|Greenparadox|3|0.5400481159068403|Vaibhav
+1|Q0|JosephJ.Romm|4|0.5130438807545644|Vaibhav
+1|Q0|88888LightsOut|5|0.46907718966874234|Vaibhav
+
+We can see here both have Globalwarmimg and JosephJRomm common in their results. Both have the keyword Globalwarming in their
+results
+
+query 2-
+
+Lucene:
+RenewableenergyintheCzechRepublic
+3Degrees
+RenewableEnergyCertificate(UnitedStates)
+RenewableenergyinMexico
+RenewableenergyinIndia
+
+BM25-
+2|Q0|Greenpaper|1|0.3556147076582182|Vaibhav
+2|Q0|Greenaccounting|2|0.30871215804120355|Vaibhav
+2|Q0|Manure|3|0.10170833706422194|Vaibhav
+2|Q0|Urbanhorticulture|4|0.09131148483099039|Vaibhav
+2|Q0|Sustainableconsumption|5|0.07321783087085883|Vaibhav
+
+The query has no result in common. Lucene conatins more results with Renewable whereas BM25 has more results with Green
+
+query-3
+
+Lucene:
+NevadaSolarOne
+SolarEnergyGeneratingSystems
+SolarDecathlon
+Concentratedsolarpower
+RenewableenergyintheUnitedStates
+
+BM25-
+3|Q0|California|1|1.2923169883881482|Vaibhav
+3|Q0|KernCounty,California|2|0.9389195207554889|Vaibhav
+3|Q0|LosAngeles|3|0.8068151534822467|Vaibhav
+3|Q0|CaliforniaInstituteofTechnology|4|0.7062879125912436|Vaibhav
+3|Q0|Camarillo,California|5|0.6999643048163047|Vaibhav
+
+The query has no result in common. Lucene has more results with Solar whereas BM25 has more results with California
+
+query-4
+
+Lucene:
+Phase-outofincandescentlightbulbs
+Energysavinglamp
+Incandescentlightbulb
+Compactfluorescentlamp
+Energyconservation
+
+BM25-
+4|Q0|Phase-outofincandescentlightbulbs|1|9.247159695516334|Vaibhav
+4|Q0|Energysavinglamp|2|8.756708081663817|Vaibhav
+4|Q0|Incandescentlightbulb|3|7.558750443337383|Vaibhav
+4|Q0|Compactfluorescentlamp|4|6.135482885703501|Vaibhav
+4|Q0|LEDlamp|5|4.20763116778606|Vaibhav
+
+This query has top 4 results in common.
+
+As we can see from the results of the two search engines across both the queries, the result is similar but not exact match.
+This might because of changes in implemenatation. Also lucene removes the Stopwords before indexing them whereas our 
+implementation on BM25 does not

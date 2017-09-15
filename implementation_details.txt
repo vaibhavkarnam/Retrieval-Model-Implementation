@@ -1,0 +1,28 @@
+Implementation details:
+
+TASK 1:
+Input:
+1. The raw HTML documents which have been parsed.
+2. Query file: A file that contains the queries in the following format: Query_ID|Query
+
+Implementation:
+
+Using the module IndexFiles.java, the program takes in raw HTML files and creates an index for the documents using the 
+SimpleAnalyzer.
+This index is then passed to SearchFiles.java which takes in the query through a file and uses the default search of
+Lucene to give the top 100 results for each query in a file.
+
+TASK 2:
+
+Input: 
+1. File list that contains the HTML content of all the 1000 URLs.
+2. Query file: A file that contains the queries in the following format: Query_ID|Query
+Implementation:
+Queries are stored in a TreeMap with queryId as key and querystring as Value.
+Each query is looked up in the unigramDocFreq document to get corresponding docFreq. 
+Using the indexer we created in assignment 3, the program obtains the unigram document frequency index for the input list of documents. 
+Then, for each query in the list, BM25 algorithm is applied to obtain a BM25 score.
+The documents are then sorted based on their BM25 scores in decreasing order.
+Output:
+A document for each query that consists of:
+Query_id|Q0|Document_ID|BM25score|System_Name
